@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Text } from 'react-native';
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
@@ -10,11 +10,7 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* <Image
-        style={styles.logo}
-        source={require('./assets/logo.png')}
-        resizeMode="contain"
-      /> */}
+      <Text>Splash</Text>
     </View>
   );
 };
