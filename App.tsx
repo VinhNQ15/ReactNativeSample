@@ -2,16 +2,20 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from './src/SplashScreen';
-import HomeTabNavigation from './src/Home/HomeTabNavigation';
+import TabNavigation from './src/Navigation/TabNavigation';
+import HeaderComponent from './src/Component/HeaderComponent';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ 
+        header: () => <HeaderComponent/> ,
+        headerShown: false
+        }}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        <Stack.Screen name="HomeTabNavigation" component={HomeTabNavigation} />
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

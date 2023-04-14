@@ -1,15 +1,16 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './HomeScreen';
-import HomeDetail from './HomeDetail';
-import Confirm from './Confirm';
-import Result from './Result';
+import HomeScreen from '../Home/HomeScreen';
+import HomeDetail from '../Home/HomeDetail';
+import Confirm from '../Home/Confirm';
+import Result from '../Home/Result';
+import HeaderComponent from '../Component/HeaderComponent';
 
 const HomeStack = createStackNavigator();
 
 const HomeNavigation = () => {
     return (
-        <HomeStack.Navigator screenOptions={{ headerShown: false }}>
+        <HomeStack.Navigator>
             <HomeStack.Screen name="HomeScreen" component={HomeScreen} />
             <HomeStack.Screen name="HomeDetail" component={HomeDetail} />
             <HomeStack.Screen name="Confirm" component={Confirm} />
