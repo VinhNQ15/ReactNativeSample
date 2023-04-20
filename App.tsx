@@ -14,7 +14,7 @@ const App = () => {
         header: () => <HeaderComponent/> ,
         headerShown: false
         }}>
-        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        {/* <Stack.Screen name="SplashScreen" component={SplashScreen} /> */}
         <Stack.Screen name="TabNavigation" component={TabNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
